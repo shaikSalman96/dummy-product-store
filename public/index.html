@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>My Store</title>
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="logo">My Store</div>
+  </header>
+
+  <main class="container">
+    <section class="product-card">
+      <div class="product-image">PRODUCT</div>
+
+      <div class="product-info">
+        <p class="tag">DEMO PRODUCT</p>
+        <h1 id="product-name">Loading...</h1>
+        <p id="product-description" class="description"></p>
+        <div id="product-price" class="price"></div>
+
+        <button id="buy-button" class="buy-button">Buy Now</button>
+        <p class="secure-note">Secure payment powered by Razorpay</p>
+      </div>
+    </section>
+  </main>
+
+  <div id="customer-modal" class="modal hidden">
+    <div class="modal-box">
+      <button id="close-modal" class="close">&times;</button>
+      <h2>Enter your details</h2>
+
+      <form id="customer-form">
+        <label>Name</label>
+        <input id="customer-name" required placeholder="Your name" />
+
+        <label>Email</label>
+        <input id="customer-email" type="email" required placeholder="you@example.com" />
+
+        <label>Phone</label>
+        <input id="customer-phone" required placeholder="10-digit mobile number" />
+
+        <button type="submit" class="buy-button">Continue to Payment</button>
+      </form>
+    </div>
+  </div>
+
+  <div id="success-modal" class="modal hidden">
+    <div class="modal-box success">
+      <div class="success-icon">✓</div>
+      <h2>Payment Successful!</h2>
+      <p>Thank you for your purchase.</p>
+      <p><strong>Order ID:</strong> <span id="success-order-id"></span></p>
+      <p><strong>Payment ID:</strong> <span id="success-payment-id"></span></p>
+      <button class="buy-button" onclick="window.location.reload()">Done</button>
+    </div>
+  </div>
+
+  <script src="/app.js"></script>
+</body>
+</html>
